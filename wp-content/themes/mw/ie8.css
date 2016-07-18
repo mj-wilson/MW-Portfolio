@@ -1,0 +1,15 @@
+#contact-panel:before {
+	background: url('images/diagonal_light_ie.png');
+}
+header {
+    background: url('images/white.png') repeat;
+}
+h3.view-project a:after {
+    background: url('images/arrow.png') 0 0 no-repeat;
+}
+#logo span {
+	display:none;
+}
+#logo {
+    background: url('images/logo_ie8.png') 0 -1px no-repeat;
+}

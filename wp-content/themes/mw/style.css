@@ -417,20 +417,30 @@ footer {
 }
 .img-holder a {
 	display:block;
+    overflow: hidden;
 }
 .img-holder img{
     max-width: 100%;
+    width:100%;
     display: block;
-    transition: all .3s ease;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    -moz-transition: -moz-transform .3s ease-in-out;
+    -ms-transition: -ms-transform .3s ease-in-out;
+    -o-transition: -o-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
 }
 .img-holder .image {
     background: #fff;
 }
 .img-holder a:hover img{
-    opacity:0.4;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 .panel {
     position: relative;
@@ -630,12 +640,13 @@ div.wpcf7 img.ajax-loader {
     -webkit-animation-name: bounce; 
     animation-name: bounce; 
 } 
-.ajax-loader {
+#contact-form div.wpcf7 .ajax-loader {
     display: block;
     position: relative;
     width: 25px;
     height:25px;
     margin: auto;
+    background: none !important;
 }
 .ajax-loader:after {
   content: '';
